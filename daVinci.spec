@@ -30,17 +30,16 @@ reusable tools for graph visualization are often hard to find.
 
 %description -l pl
 daVinci jest uniwersalnym, ogólnym systemem wizualizacji s³u¿±cym do
-automatycznego tworzenia wysokiej jako¶ci rysunków grafów
-skierowanych. W aplikacjach komputerowych czêsto u¿ywa siê grafów jako
-ogólnej struktury danych, reprezentuj±cej obiekty oraz zwi±zki miêdzy
-nimi. Uzywa siê ich do implementacji hierarchii, struktur zalezno¶ci,
-sieci, konfiguracji, przep³ywu danych itd. Mimo wielorakiego
-zapotrzebowania, w dzisiejszych aplikacjach wci±¿ brakuje technik
-s³u¿±cych wizualizacji takich grafów. Czêsto wiêc u¿ytkownik musi
-pos³ugiwaæ siê niewygodnymi interfejsami tekstowymi lub
-prowizorycznymi rysunkami grafów, poniewa¿ trudno zaimplemetowaæ
-wysokiej jako¶ci uk³ad grafów i trudno znale¼æ narzêdzia do
-wizualizacji grafów nadaj±cych siê do wielokrotnego wykorzystania.
+automatycznego tworzenia wysokiej jako¶ci rysunków grafów skierowanych. 
+W aplikacjach komputerowych czêsto u¿ywa siê grafów jako ogólnej struktury 
+danych, reprezentuj±cej obiekty oraz zwi±zki miêdzy nimi. U¿ywa siê ich do 
+implementacji hierarchii, struktur zale¿no¶ci, sieci, konfiguracji, 
+przep³ywu danych itd. Mimo wielorakiego zapotrzebowania, w dzisiejszych 
+aplikacjach wci±¿ brakuje technik s³u¿±cych wizualizacji takich grafów. 
+Czêsto wiêc u¿ytkownik musi pos³ugiwaæ siê niewygodnymi interfejsami 
+tekstowymi lub prowizorycznymi rysunkami grafów, poniewa¿ trudno 
+zaimplementowaæ wysokiej jako¶ci uk³ad grafów i trudno znale¼æ narzêdzia 
+do wizualizacji grafów nadaj±cych siê do wielokrotnego wykorzystania.
 
 %prep
 %setup -q -n daVinci_V2.1
