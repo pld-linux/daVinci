@@ -1,20 +1,25 @@
 Summary:	daVinci is a universal, generic visualization system
+Summary(pl):	Uniwersalny, ogólny system wizualizacji
 Name:		daVinci
 Version:	2.1
 Release:	1
-Copyright:	daVinci is licensed free of charge for non-profit or internal use.
+License:	free of charge for non-profit or internal use
 Group:		X11/Applications/Graphics
+Group(de):	X11/Applikationen/Grafik
 Group(pl):	X11/Aplikacje/Grafika
-Source0:	ftp://ftp.tzi.de/tzi/biss/daVinci/%{name}_V2.1_Linux_RedHat5.tar.gz
-Source1:	daVinci.csh
-Source2:	daVinci.sh
-Source3:	daVinci.wmconfig
+Group(pt):	X11/Aplicações/Gráficos
+Source0:	ftp://ftp.tzi.de/tzi/biss/daVinci/%{name}_V%{version}_Linux_RedHat5.tar.gz
+Source1:	%{name}.csh
+Source2:	%{name}.sh
+Source3:	%{name}.desktop
 URL:		http://www.tzi.de/~davinci/daVinci_get_daVinci.html
-ExclusiveArch:	i386
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
+
+%define		pkghome		%{_libdir}/daVinci_V2.1
 
 %description
 daVinci is a universal, generic visualization system for automatic
@@ -48,24 +53,35 @@ wizualizacji grafów nadaj±cych siê do wielokrotnego wykorzystania.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/bin
-install -d $RPM_BUILD_ROOT/usr/local/daVinci_V2.1
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig
-install -d $RPM_BUILD_ROOT/etc/profile.d
-cp -r * $RPM_BUILD_ROOT/usr/local/daVinci_V2.1
-cp $RPM_SOURCE_DIR/daVinci.sh $RPM_BUILD_ROOT/etc/profile.d/daVinci.sh
-cp $RPM_SOURCE_DIR/daVinci.csh $RPM_BUILD_ROOT/etc/profile.d/daVinci.csh
-cp $RPM_SOURCE_DIR/daVinci.wmconfig $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig/daVinci
-cd $RPM_BUILD_ROOT%{_prefix}/bin
-ln -s ../../local/daVinci_V2.1/daVinci
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Graphics,/etc/profile.d,%{pkghome}}
+cp -r * $RPM_BUILD_ROOT%{pkghome}
+install %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d/daVinci.sh
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/profile.d/daVinci.csh
+install %{SOURCE3} $RPM_BUILD_ROOT%{_applnkdir}/Graphics
+cd $RPM_BUILD_ROOT%{_bindir}
+ln -sf %{pkghome}/daVinci .
 
 %clean
-rm -rf * $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(-,root,root) %{_prefix}/bin/daVinci
-%attr(-,root,root) /usr/local/daVinci_V2.1
-%attr(-,root,root) %{_sysconfdir}/X11/wmconfig/daVinci
-%attr(-,root,root) /etc/profile.d/daVinci.sh
-%attr(-,root,root) /etc/profile.d/daVinci.csh
+%attr(755,root,root) %{_bindir}/daVinci
+%dir %{pkghome}
+%{pkghome}/[B-R]*
+%attr(755,root,root) %{pkghome}/daVinci
+%{pkghome}/api
+%docdir %{pkghome}/docs
+%{pkghome}/docs
+%{pkghome}/example_graphs
+%dir %{pkghome}/grapheditor
+%{pkghome}/grapheditor/README
+%attr(755,root,root) %{pkghome}/grapheditor/grapheditor
+%{pkghome}/icons
+%{pkghome}/lib
+%dir %{pkghome}/tools
+%{pkghome}/tools/README
+%attr(755,root,root) %{pkghome}/tools/*term
+%{_applnkdir}/Graphics/daVinci.desktop
+%attr(755,root,root) /etc/profile.d/daVinci.sh
+%attr(755,root,root) /etc/profile.d/daVinci.csh
