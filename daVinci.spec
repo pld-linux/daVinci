@@ -35,7 +35,7 @@ skierowanych. W aplikacjach komputerowych czêsto u¿ywa siê grafów jako
 ogólnej struktury danych, reprezentuj±cej obiekty oraz zwi±zki miêdzy
 nimi. Uzywa siê ich do implementacji hierarchii, struktur zalezno¶ci,
 sieci, konfiguracji, przep³ywu danych itd. Mimo wielorakiego
-zapotzrebowania, w dzisiejszych aplikacjach wci±¿ brakuje technik
+zapotrzebowania, w dzisiejszych aplikacjach wci±¿ brakuje technik
 s³u¿±cych wizualizacji takich grafów. Czêsto wiêc u¿ytkownik musi
 pos³ugiwaæ siê niewygodnymi interfejsami tekstowymi lub
 prowizorycznymi rysunkami grafów, poniewa¿ trudno zaimplemetowaæ
