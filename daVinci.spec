@@ -50,6 +50,7 @@ wizualizacji grafów nadaj±cych siê do wielokrotnego wykorzystania.
 
 %prep
 %setup -q -n daVinci_V2.1
+chmod -R o+w *
 
 %install
 rm -rf $RPM_BUILD_ROOT
