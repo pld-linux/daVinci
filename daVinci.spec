@@ -3,20 +3,17 @@ Name: daVinci
 Version: 2.1
 Release: 1
 
-
 URL: http://www.tzi.de/~davinci/daVinci_get_daVinci.html
 Copyright: daVinci is licensed free of charge for non-profit or internal use.
 Group: X11/Applications/Graphics
-
 
 Source0: daVinci_V2.1_Linux_RedHat5.tar.gz
 Source1: daVinci.csh
 Source2: daVinci.sh
 Source3: daVinci.wmconfig
 ExclusiveArch: i386
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Packager: Andrea Borgia <borgia@cs.unibo.it>
-
 
 %description
 daVinci is a universal, generic visualization system for automatic generation
@@ -46,7 +43,6 @@ do wizualizacji grafów nadaj±cych siê do wielokrotnego wykorzystania.
 %prep
 %setup -n daVinci_V2.1
 
-
 %install
 mkdir -p $RPM_BUILD_ROOT/usr/X11R6/bin
 mkdir -p $RPM_BUILD_ROOT/usr/local/daVinci_V2.1
@@ -59,10 +55,8 @@ cp $RPM_SOURCE_DIR/daVinci.wmconfig $RPM_BUILD_ROOT/etc/X11/wmconfig/daVinci
 cd $RPM_BUILD_ROOT/usr/X11R6/bin
 ln -s ../../local/daVinci_V2.1/daVinci
 
-
 %clean
 rm -rf * $RPM_BUILD_ROOT
-
 
 %files
 %attr(-,root,root) /usr/X11R6/bin/daVinci
