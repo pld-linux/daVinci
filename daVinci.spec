@@ -5,7 +5,7 @@ Release:	1
 Copyright:	daVinci is licensed free of charge for non-profit or internal use.
 Group:		X11/Applications/Graphics
 Group(pl):	X11/Aplikacje/Grafika
-Source0:	daVinci_V2.1_Linux_RedHat5.tar.gz
+Source0:	ftp://ftp.tzi.de/tzi/biss/daVinci/%{name}_V2.1_Linux_RedHat5.tar.gz
 Source1:	daVinci.csh
 Source2:	daVinci.sh
 Source3:	daVinci.wmconfig
