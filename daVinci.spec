@@ -11,8 +11,6 @@ URL:		http://www.tzi.de/~davinci/daVinci_get_daVinci.html
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %define		pkghome		%{_libdir}/daVinci_V2.1
 
