@@ -53,11 +53,11 @@ rm -rf * $RPM_BUILD_ROOT
 
 
 %files
-%attr(-, root, root) /usr/X11R6/bin/daVinci
-%attr(-, root, root) /usr/local/daVinci_V2.1
-%attr(-, root, root) /etc/X11/wmconfig/daVinci
-%attr(-, root, root) /etc/profile.d/daVinci.sh
-%attr(-, root, root) /etc/profile.d/daVinci.csh
+%attr(-,root,root) /usr/X11R6/bin/daVinci
+%attr(-,root,root) /usr/local/daVinci_V2.1
+%attr(-,root,root) /etc/X11/wmconfig/daVinci
+%attr(-,root,root) /etc/profile.d/daVinci.sh
+%attr(-,root,root) /etc/profile.d/daVinci.csh
 
 
 %changelog
