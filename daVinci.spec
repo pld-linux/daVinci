@@ -82,6 +82,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{pkghome}/tools
 %{pkghome}/tools/README
 %attr(755,root,root) %{pkghome}/tools/*term
-#%{_applnkdir}/Graphics/daVinci.desktop
+#%%{_applnkdir}/Graphics/daVinci.desktop
 %attr(755,root,root) /etc/profile.d/daVinci.sh
 %attr(755,root,root) /etc/profile.d/daVinci.csh
