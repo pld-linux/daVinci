@@ -14,7 +14,7 @@ Source1: daVinci.csh
 Source2: daVinci.sh
 Source3: daVinci.wmconfig
 ExclusiveArch: i386
-BuildRoot: /tmp/daVinci-buildroot
+BuildRoot:	/tmp/%{name}-%{version}-root
 Packager: Andrea Borgia <borgia@cs.unibo.it>
 
 
