@@ -6,6 +6,7 @@ Release:	2
 License:	free of charge for non-profit or internal use
 Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.tzi.de/tzi/biss/daVinci/%{name}_V%{version}_Linux_RedHat5.tar.gz
+# Source0-md5:	526fd8b372179612cb1d4eb33aa435aa
 #Source1:	%{name}.desktop
 URL:		http://www.tzi.de/~davinci/daVinci_get_daVinci.html
 ExclusiveArch:	%{ix86}
