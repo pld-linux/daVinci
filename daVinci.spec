@@ -9,9 +9,7 @@ Group(de):	X11/Applikationen/Grafik
 Group(pl):	X11/Aplikacje/Grafika
 Group(pt):	X11/Aplicações/Gráficos
 Source0:	ftp://ftp.tzi.de/tzi/biss/daVinci/%{name}_V%{version}_Linux_RedHat5.tar.gz
-Source1:	%{name}.csh
-Source2:	%{name}.sh
-Source3:	%{name}.desktop
+Source1:	%{name}.desktop
 URL:		http://www.tzi.de/~davinci/daVinci_get_daVinci.html
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -50,17 +48,23 @@ wizualizacji grafów nadaj±cych siê do wielokrotnego wykorzystania.
 
 %prep
 %setup -q -n daVinci_V2.1
-chmod -R o+w *
+chmod -R a+w *
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Graphics,/etc/profile.d,%{pkghome}}
 cp -r * $RPM_BUILD_ROOT%{pkghome}
-install %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d/daVinci.sh
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/profile.d/daVinci.csh
-install %{SOURCE3} $RPM_BUILD_ROOT%{_applnkdir}/Graphics
+#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Graphics
 cd $RPM_BUILD_ROOT%{_bindir}
 ln -sf %{pkghome}/daVinci .
+
+cat > $RPM_BUILD_ROOT/etc/profile.d/%{name}.csh <<EOF
+setenv DAVINCIHOME %{pkghome}
+EOF
+
+cat >$RPM_BUILD_ROOT/etc/profile.d/daVinci.sh <<EOF2
+export DAVINCIHOME=%{pkghome}
+EOF2
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -83,6 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{pkghome}/tools
 %{pkghome}/tools/README
 %attr(755,root,root) %{pkghome}/tools/*term
-%{_applnkdir}/Graphics/daVinci.desktop
+#%{_applnkdir}/Graphics/daVinci.desktop
 %attr(755,root,root) /etc/profile.d/daVinci.sh
 %attr(755,root,root) /etc/profile.d/daVinci.csh
