@@ -5,9 +5,6 @@ Version:	2.1
 Release:	1
 License:	free of charge for non-profit or internal use
 Group:		X11/Applications/Graphics
-Group(de):	X11/Applikationen/Grafik
-Group(pl):	X11/Aplikacje/Grafika
-Group(pt):	X11/Aplicações/Gráficos
 Source0:	ftp://ftp.tzi.de/tzi/biss/daVinci/%{name}_V%{version}_Linux_RedHat5.tar.gz
 Source1:	%{name}.desktop
 URL:		http://www.tzi.de/~davinci/daVinci_get_daVinci.html
