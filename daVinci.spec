@@ -58,10 +58,3 @@ rm -rf * $RPM_BUILD_ROOT
 %attr(-,root,root) /etc/X11/wmconfig/daVinci
 %attr(-,root,root) /etc/profile.d/daVinci.sh
 %attr(-,root,root) /etc/profile.d/daVinci.csh
-
-
-%changelog
-* Sat Jul 18 1998 Andrea Borgia <borgia@cs.unibo.it>
-- first rpm build
-- made buildroot capable
-- added profile.d scripts
