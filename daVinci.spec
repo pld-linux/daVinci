@@ -2,11 +2,11 @@ Summary:	daVinci is a universal, generic visualization system
 Summary(pl):	Uniwersalny, ogólny system wizualizacji
 Name:		daVinci
 Version:	2.1
-Release:	1
+Release:	2
 License:	free of charge for non-profit or internal use
 Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.tzi.de/tzi/biss/daVinci/%{name}_V%{version}_Linux_RedHat5.tar.gz
-Source1:	%{name}.desktop
+#Source1:	%{name}.desktop
 URL:		http://www.tzi.de/~davinci/daVinci_get_daVinci.html
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
