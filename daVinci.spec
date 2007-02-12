@@ -1,5 +1,5 @@
 Summary:	daVinci is a universal, generic visualization system
-Summary(pl):	Uniwersalny, ogólny system wizualizacji
+Summary(pl.UTF-8):   Uniwersalny, ogÃ³lny system wizualizacji
 Name:		daVinci
 Version:	2.1
 Release:	2
@@ -28,18 +28,18 @@ uncomfortable textual interfaces or poor ad-hoc drawings of graphs,
 because high-quality graph layout is difficult to implement and
 reusable tools for graph visualization are often hard to find.
 
-%description -l pl
-daVinci jest uniwersalnym, ogólnym systemem wizualizacji s³u¿±cym do
-automatycznego tworzenia wysokiej jako¶ci rysunków grafów skierowanych. 
-W aplikacjach komputerowych czêsto u¿ywa siê grafów jako ogólnej struktury 
-danych, reprezentuj±cej obiekty oraz zwi±zki miêdzy nimi. U¿ywa siê ich do 
-implementacji hierarchii, struktur zale¿no¶ci, sieci, konfiguracji, 
-przep³ywu danych itd. Mimo wielorakiego zapotrzebowania, w dzisiejszych 
-aplikacjach wci±¿ brakuje technik s³u¿±cych wizualizacji takich grafów. 
-Czêsto wiêc u¿ytkownik musi pos³ugiwaæ siê niewygodnymi interfejsami 
-tekstowymi lub prowizorycznymi rysunkami grafów, poniewa¿ trudno 
-zaimplementowaæ wysokiej jako¶ci uk³ad grafów i trudno znale¼æ narzêdzia 
-do wizualizacji grafów nadaj±cych siê do wielokrotnego wykorzystania.
+%description -l pl.UTF-8
+daVinci jest uniwersalnym, ogÃ³lnym systemem wizualizacji sÅ‚uÅ¼Ä…cym do
+automatycznego tworzenia wysokiej jakoÅ›ci rysunkÃ³w grafÃ³w skierowanych. 
+W aplikacjach komputerowych czÄ™sto uÅ¼ywa siÄ™ grafÃ³w jako ogÃ³lnej struktury 
+danych, reprezentujÄ…cej obiekty oraz zwiÄ…zki miÄ™dzy nimi. UÅ¼ywa siÄ™ ich do 
+implementacji hierarchii, struktur zaleÅ¼noÅ›ci, sieci, konfiguracji, 
+przepÅ‚ywu danych itd. Mimo wielorakiego zapotrzebowania, w dzisiejszych 
+aplikacjach wciÄ…Å¼ brakuje technik sÅ‚uÅ¼Ä…cych wizualizacji takich grafÃ³w. 
+CzÄ™sto wiÄ™c uÅ¼ytkownik musi posÅ‚ugiwaÄ‡ siÄ™ niewygodnymi interfejsami 
+tekstowymi lub prowizorycznymi rysunkami grafÃ³w, poniewaÅ¼ trudno 
+zaimplementowaÄ‡ wysokiej jakoÅ›ci ukÅ‚ad grafÃ³w i trudno znaleÅºÄ‡ narzÄ™dzia 
+do wizualizacji grafÃ³w nadajÄ…cych siÄ™ do wielokrotnego wykorzystania.
 
 %prep
 %setup -q -n daVinci_V2.1
