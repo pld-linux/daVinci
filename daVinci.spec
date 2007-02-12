@@ -1,5 +1,5 @@
 Summary:	daVinci is a universal, generic visualization system
-Summary(pl.UTF-8):   Uniwersalny, ogólny system wizualizacji
+Summary(pl.UTF-8):	Uniwersalny, ogólny system wizualizacji
 Name:		daVinci
 Version:	2.1
 Release:	2
